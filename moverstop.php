@@ -13,7 +13,7 @@ function addStopMoverButton() {
 ?>
 <script type="text/javascript">
 $(function() {
-    let moverBtn = $('button:contains("Move Now")');
+    let moverBtn = $('button:contains("Move")');
 
     if (moverBtn.length && $('#stopMoverBtn').length === 0) {
         $('<button id="stopMoverBtn" class="btn">Stop Mover</button>')
