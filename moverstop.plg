@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<PLUGIN name="moverstop" author="YourName" version="2025.08.17" min="6.12.0" pluginURL="https://github.com/YourName/unraid-moverstop-plugin">
+<PLUGIN name="moverstop" author="vizolini" version="2025.08.17" min="6.12.0" pluginURL="https://github.com/vizolini/Unraid-mover-stop-button/">
   <CHANGES>
     Initial release: Adds a "Stop Mover" button beside "Move Now".
   </CHANGES>
@@ -7,7 +7,7 @@
   <FILE Run="/bin/bash" Name="/usr/local/emhttp/plugins/moverstop/moverstop.php">
     <![CDATA[
       mkdir -p /usr/local/emhttp/plugins/moverstop
-      wget -qO /usr/local/emhttp/plugins/moverstop/moverstop.php https://raw.githubusercontent.com/YourName/unraid-moverstop-plugin/main/moverstop.php
+      wget -qO /usr/local/emhttp/plugins/moverstop/moverstop.php https://raw.githubusercontent.com/vizolini/Unraid-mover-stop-button/main/moverstop.php
     ]]>
   </FILE>
 </PLUGIN>
