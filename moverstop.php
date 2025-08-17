@@ -6,14 +6,15 @@
 $docroot = $docroot ?? $_SERVER['DOCUMENT_ROOT'] ?: '/usr/local/emhttp';
 require_once "$docroot/webGui/include/Helpers.php";
 
-// Hook into Unraid header to inject JS
+// Hook into Unraid Main tab
 add_hook('Main', 'addStopMoverButton');
 
 function addStopMoverButton() {
 ?>
 <script type="text/javascript">
 $(function() {
-    let moverBtn = $('button:contains("Move")').first()
+    // Look for the "Move" button
+    let moverBtn = $('button:contains("Move")').first();
 
     if (moverBtn.length && $('#stopMoverBtn').length === 0) {
         $('<button id="stopMoverBtn" class="btn">Stop Mover</button>')
