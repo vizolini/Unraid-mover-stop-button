@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <PLUGIN name="Stop Mover Button" author="vizolini" version="2025.08.17" min="6.12.0" pluginURL="https://github.com/vizolini/Unraid-mover-stop-button">
   <CHANGES>
-    Update: Button selector fixed for "Move" button; use /bin/sh and curl.
+    Fix: Download PHP file correctly without trying to execute it.
   </CHANGES>
 
-  <FILE Run="/bin/sh" Name="/usr/local/emhttp/plugins/moverstop/moverstop.php">
+  <FILE Run="/bin/sh" Name="/tmp/moverstop.sh">
     <![CDATA[
       mkdir -p /usr/local/emhttp/plugins/moverstop
-      curl -fsSL -o /usr/local/emhttp/plugins/moverstop/moverstop.php https://raw.githubusercontent.com/vizolini/Unraid-mover-stop-button/refs/heads/main/moverstop.php
+      curl -fsSL -o /usr/local/emhttp/plugins/moverstop/moverstop.php https://raw.githubusercontent.com/vizolini/Unraid-mover-stop-button/main/moverstop.php
     ]]>
   </FILE>
 </PLUGIN>
